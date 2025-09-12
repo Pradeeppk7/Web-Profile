@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+    scroll-behavior: smooth;
+    background-color:rgb(0, 35, 44);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+main {
+    position: fixed;
+    width: 100%;
+    transition: 1s;
+    z-index: 100;
+    top: 0;
+}
+
+.upper {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(0, 35, 44);
+
+    img {
+        height: 20vh;
+        width: 20vh;
+        margin-left: 2vh;
+    }
+
+}
+
+#nameplate {
+    height: 30vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: rgb(0, 35, 44); */
+    color: blanchedalmond;
+
+    h1 {
+        font-size: 8vh;
+    }
+
+    h3 {
+        font-size: 4vh;
+    }
+
+    p {
+        color: rgba(255, 235, 205, 0.902);
+        font-size: 3vh;
+    }
+}
+
+#pic {
+    img {
+        border-radius: 50%;
+        height: 25vh;
+        width: 25vh;
+        border: 0.5vh solid rgb(0, 35, 44);
+    }
+
+}
+.navbar {
+    height: 10vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 35, 44);
+
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        li {
+            margin: 1vh;
+            transition: .5s;
+
+            a {
+                text-decoration: none;
+                color: blanchedalmond;
+                font-size: 3vh;
+                font-weight: bold;
+                border: 0.5vh solid rgb(255, 235, 205);
+                padding: .2vh;
+                border-radius: .5vh;
+            }
+
+            a:hover {
+                transform: scale(1.2);
+                color: rgb(254, 199, 116);
+                border: 0.5vh solid rgb(254, 199, 116);
+            }
+        }
+
+        li:hover {
+            transform: scale(1.1);
+            transition: .5s;
+            cursor: pointer;
+        }
+    }
+
+    .skills {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2vh;
+        margin-top: 2vh;
+        transition: 1s;
+
+        div {
+            height: 20vh;
+            width: 20vh;
+            border: 0.5vh solid rgb(0, 35, 44);
+            border-radius: 1vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transition: .5s;
+
+            img {
+                height: 10vh;
+                width: 10vh;
+            }
+
+            h3 {
+                margin-top: 1vh;
+                font-size: 3vh;
+                color: rgb(0, 35, 44);
+            }
+        }
+
+        div:hover {
+            transform: scale(1.1);
+            border: 0.5vh solid rgb(254, 199, 116);
+            box-shadow: 0vh 0vh 2vh rgb(254, 199, 116);
+        }
+    }
+}
+#dummy{
+    height: 20vh;
+}
+#dummy2{
+    height: 20vh;
+}
+#content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3vh 0vh 3vh 0vh;
+}
+#about{
+    height: 15vh;
+    margin-bottom: 2vh;
+    font-weight: 500;
+    width: 90vw;
+    color: rgb(0, 35, 44);
+    background-color: rgb(255, 235, 205);
+    border-radius: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
+    p{
+        font-size: 3vh;
+        text-align: center;
+        background-color: rgb(255, 235, 205);
+    }
+}
+#skills{
+    height: 25vh;
+    width: 90vw;
+    color: rgb(0, 35, 44);
+    background-color: rgb(255, 235, 205);
+    border-radius: 3vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh;
+    h2{
+        font-size: 5vh;
+        width: 20vw;
+        
+    background-color: rgb(255, 235, 205);
+        text-align: center;
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        
+    background-color: rgb(255, 235, 205);
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2vh;
+        width: 80vw;
+        transition: 1s;
+    }
+        li{
+            color: rgb(0, 35, 44);
+            font-size: 3vh;
+            background-color: rgb(255, 235, 205);
+            border: solid 0.5vh rgb(0, 35, 44);
+            border-radius: .5vh;
+            padding: .5vh;
+            margin: .5vh;
+            width: 40vh;
+            text-align: center;
+            transition: .5s;
+        }
+        li:hover{
+            transform: scale(1.05);
+            transition: .5s;
+            
+        box-shadow: 0vh 0vh 2vh rgb(255, 249, 241);
+        }
+}
+
+#education{
+    margin-top: 2vh;
+    color: rgb(0, 35, 44);
+    background-color: rgb(255, 235, 205);
+    border-radius: 3vh;
+    height: 25vh;
+    width:90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh;
+    h2{
+        font-size: 5vh;
+        width: 20vw;
+        text-align: center;
+        background-color: rgb(255, 235, 205);
+    }
+    .edu1 ,.edu2{
+        width: 40vw;
+        height:18vh;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+        padding: 3vh;
+        background-color: rgb(255, 235, 205);
+        flex: column;
+        justify-content: center;
+        align-items: center;
+        border-left: 0.5vh solid rgb(0, 35, 44);
+        border-radius: .3vh;
+        p,h3{
+            background-color: rgb(255, 235, 205);
+        }
+    }
+}
+
+#experience{
+    background-color: rgb(255, 235, 205);
+    color: rgb(0, 35, 44);
+    height: 25vh;
+    margin-top: 2vh;
+    width: 90vw;
+    border-radius: 3vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    ul{
+        width: 50vw;
+    background-color: rgb(255, 235, 205);
+    li{
+        
+    background-color: rgb(255, 235, 205);
+    }
+    }
+    p,h3{
+        
+    background-color: rgb(255, 235, 205);
+    }
+    h2{
+        font-size: 5vh;
+        
+    background-color: rgb(255, 235, 205);
+        width: 20vw;
+        text-align: center;
+    }
+    .exp1{
+        
+    background-color: rgb(255, 235, 205);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 2vh;
+    }
+       
+ 
+}
+
+#project{
+    height: 60vh;
+    background-color: rgb(255, 235, 205);
+    width: 90vw;
+    border-radius: 3vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+        margin-top: 2vh;
+    align-items: center;
+    h2{
+        font-size: 5vh;
+        background-color: rgb(255, 235, 205);
+        width: 20vw;
+        text-align: center;
+    }
+    
+    .proj{
+        width: 70vw;
+        height: 40vh;
+        background-color: rgb(255, 235, 205);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 2vh;
+    }
+    .proj1{
+        height: 18vh;
+        width: 30vw;
+        border: 0.5vh solid rgb(0, 35, 44);
+        border-radius: 1vh;
+        margin: 1vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: .5s;
+        img{
+            height: 10vh;
+            width: 10vh;
+        }
+        h3{
+            margin-top: 1vh;
+            font-size: 3vh;
+            color: rgb(0, 35, 44);
+        }
+    }
+    .subproj1{
+        height: 18vh;
+        width: 30vw;
+        border: 0.5vh solid rgb(0, 35, 44);
+        border-radius: 1vh;
+        margin: 1vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: .5s;
+        
+        h3{
+            margin-top: 1vh;
+            font-size: 3vh;
+            color:blanchedalmond;
+            text-align: center;
+            padding: 2vh;
+        }
+       
+    }
+    .subproj1:hover{
+        transform: scale(1.05);
+        box-shadow: 0vh 0vh 2vh rgb(255, 249, 241);
+        .hover-text{
+      visibility: visible;
+      transition: 1s;
+    }
+    }
+    .hover-text {
+      visibility: hidden;
+      color: white;
+      text-align: center;
+      transition: .5s;
+    }
+    
+}

@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styledesktop.css" media="screen and (min-width: 769px)">
+    <link rel="stylesheet" href="stylemobile.css" media="screen and (max-width: 768px)">
 </head>
 <body>
     <main>
     <div class="upper">
-        <section id="about">
+        <section id="nameplate">
             <h1>Pradeep Kumar Senthil</h1>
             <h3>Fullstack Developer</h3>
-            <p>Software Developer with 2 years of experience in Full Stack and Data Engineer.</p>
         </section>
         <div></div>
         <section id="pic">
 
-            <img src="asset\IMG_9311.JPG" alt="Profile Picture">
+            <img src="asset\20250906_130332.JPG" alt="Profile Picture">
         </section>
     </div>
     <nav class="navbar">
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
+            <li><a href="#dummy">About</a></li>
             <li><a href="#dummy">Skills</a></li>
+            <li><a href="#dummy2">Education</a></li>
             <li><a href="#skills">Experience</a></li>
             <li><a href="#project">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -33,7 +33,16 @@
     </main>
     <section id="dummy">   
     </section>
+    <section id="dummy2">   
+    </section>
+<div id="content">
+    <section id="about">   
+         <p>Software Developer with 2 years of experience in Full Stack and Data Engineer. With an aesthetic eye for UI and design, I ensure that every project I work on is both functional and visually appealing.
 
+Currently, I am exploring data analytics (tableau, pyspark) and generative AI in full-stack development and aiming to contribute to advancements in digital innovations. </p>
+
+    </section>
+    
     <section id="skills">   
         <h2>Skills</h2>
         <ul>
@@ -45,53 +54,49 @@
             <li>Node.js</li>
         </ul>   
     </section>
+    <section id="education">   
+        <h2>Education</h2>
+        <div class="edu2">
+            <h3>Master in Information technology and management</h3>
+            <p>2025 - 2027</p>
+            <p>GPA: 4/4</p>
+            <p>illinois Institute of Technology, Chicago</p>
+        </div>
+        <div class="edu1">
+            <h3>Bachelor of Engineering in Computer Science</h3>
+            <p>2019 - 2023</p>
+            <p>CGPA: 8.54</p>
+            <p>Sathyabama University, Chennai</p>
+        </div>
+        
+    </section>
     <section id="experience">   
         <h2>Experience</h2>
-        <h3>Capgemini - Fullstack</h3>
-        <p>2023 - 2024</p>
-        <ul>
-            <li>Developed and maintained web applications using React and SpringBoot</li>
-            <li>Cleaned and optimised data, Automated jobs in DataBricks and Developed dashboards using tableau integrating with react</li>
-            <li>Collaborated with cross-functional teams to define project requirements.</li>
-        </ul>
+        <div class="exp1">
+            <div class="card1">
+                <h3>Capgemini - Fullstack Developer</h3>
+                <p>2023 - 2024</p>
+            </div>
+            <ul>
+                <li>Developed and maintained web applications using React and SpringBoot</li>
+                <li>Cleaned and optimised data, Automated jobs in DataBricks and Developed dashboards using tableau integrating with react</li>
+                <li>Collaborated with cross-functional teams to define project requirements.</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="project">   
+        <h2>Projects</h2>
+        <div class="proj">
+            <div class="subproj1" onclick="window.open('https://github.com/Pradeeppk7/Gymapplication-MEAN', '_blank')"><h3>Gym Application</h3> <p class="hover-text">Click here to open project's github</p></div>
+            <div class="subproj1" onclick="window.open('https://github.com/Pradeeppk7/Ecommerce-Web-application-NX', '_blank')"><h3>Ecommerce Application</h3> <p class="hover-text">Click here to open project's github</p></div>
+            <div class="subproj1" onclick="window.open('https://github.com/Pradeeppk7/JavaScript-Major-Module-Test', '_blank')"><h3>JavaScript Game</h3> <p class="hover-text">Click here to open project's github</p></div>
+            <div class="subproj1" onclick="window.open('https://github.com/Pradeeppk7/Crypto-Tracker-Flutter', '_blank')"><h3>Crypto App</h3> <p class="hover-text">Click here to open project's github</p></div>
+        </div>
+       
+    </section>
         
 
-    </section>
-        <section id="project">   
-        <h2>Experience</h2>
-        <h3>Capgemini - Fullstack</h3>
-        <p>2023 - 2024</p>
-        <ul>
-            <li>Developed and maintained web applications using React and SpringBoot</li>
-            <li>Cleaned and optimised data, Automated jobs in DataBricks and Developed dashboards using tableau integrating with react</li>
-            <li>Collaborated with cross-functional teams to define project requirements.</li>
-        </ul>
-        
-
-    </section>
-        <section id="experience">   
-        <h2>Experience</h2>
-        <h3>Capgemini - Fullstack</h3>
-        <p>2023 - 2024</p>
-        <ul>
-            <li>Developed and maintained web applications using React and SpringBoot</li>
-            <li>Cleaned and optimised data, Automated jobs in DataBricks and Developed dashboards using tableau integrating with react</li>
-            <li>Collaborated with cross-functional teams to define project requirements.</li>
-        </ul>
-        
-
-    </section>
-        <section id="experience">   
-        <h2>Experience</h2>
-        <h3>Capgemini - Fullstack</h3>
-        <p>2023 - 2024</p>
-        <ul>
-            <li>Developed and maintained web applications using React and SpringBoot</li>
-            <li>Cleaned and optimised data, Automated jobs in DataBricks and Developed dashboards using tableau integrating with react</li>
-            <li>Collaborated with cross-functional teams to define project requirements.</li>
-        </ul>
-        
-
-    </section>
+</div>
 </body>
 </html>
