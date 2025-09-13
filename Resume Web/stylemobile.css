@@ -1,0 +1,368 @@
+/* Mobile overrides for your resume site
+   - Derived from desktopstyle.css
+   - Targets phones/tablets (≤768px)
+*/
+
+/* Keep your Google font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root {
+  --bg: rgb(0, 35, 44);
+  --card: rgb(255, 235, 205);
+  --accent: rgb(254, 199, 116);
+  --ink: rgb(0, 35, 44);
+  --ink-soft: rgba(255, 235, 205, 0.9);
+}
+
+/* Base */
+* {
+  box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: blanchedalmond;
+  line-height: 1.5;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Avoid fixed headers on mobile; let content flow */
+main {
+  position: relative !important;
+  width: 100%;
+  z-index: 1;
+  transition: none;
+  top: auto;
+}
+
+/* Header / upper section */
+.upper {
+  min-height: 140px;
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg);
+}
+
+.upper img,
+#pic img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  border: 3px solid var(--bg);
+  object-fit: cover;
+}
+
+/* Nameplate */
+#nameplate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: blanchedalmond;
+  text-align: center;
+  padding: 8px 12px;
+}
+
+#nameplate h1 {
+  font-size: clamp(1.4rem, 6vw, 2rem);
+  margin: 0;
+}
+
+#nameplate h3 {
+  font-size: clamp(1rem, 4.5vw, 1.2rem);
+  margin: 0;
+}
+
+#nameplate p {
+  font-size: clamp(.9rem, 4vw, 1rem);
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* Nav */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  width: 100%;
+  padding: 8px 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  z-index: 10;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li { margin: 0; }
+
+.navbar a {
+  display: inline-block;
+  text-decoration: none;
+  color: blanchedalmond;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 2px solid var(--card);
+  padding: 10px 14px;             /* 44px+ tap target height */
+  border-radius: 8px;
+}
+
+/* Disable hover zoom on touch; keep focus-visible */
+.navbar a:focus-visible {
+  outline: 2px dashed var(--accent);
+  outline-offset: 2px;
+}
+
+/* Content wrappers */
+#dummy, #dummy2 { height: 12px; }
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0 24px;
+}
+
+/* Cards / sections */
+.card-like {
+  width: min(94vw, 720px);
+  background: var(--card);
+  color: var(--ink);
+  border-radius: 16px;
+  padding: 14px;
+}
+
+/* About */
+#about {
+  composes: card-like;
+  width: min(94vw, 720px);
+  background: var(--card);
+  color: var(--ink);
+  border-radius: 16px;
+  padding: 14px;
+}
+
+#about p {
+  background: var(--card);
+  font-size: 1rem;
+  text-align: left;
+  margin: 0;
+}
+
+/* Skills (list version) */
+#skills {
+  width: min(94vw, 720px);
+  background: var(--card);
+  color: var(--ink);
+  border-radius: 16px;
+  padding: 14px;
+}
+
+#skills h2 {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 0 0 10px 0;
+  background: var(--card);
+}
+
+#skills ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  background: var(--card);
+}
+
+#skills li {
+  background: var(--card);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: 10px;
+  padding: 10px 12px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Skills (icon tiles inside .navbar .skills) */
+.navbar .skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.navbar .skills > div {
+  height: auto;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  border: 2px solid var(--bg);
+  border-radius: 10px;
+  background: var(--card);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.navbar .skills img {
+  width: 48px;
+  height: 48px;
+}
+
+.navbar .skills h3 {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+/* Education */
+#education {
+  width: min(94vw, 720px);
+  background: var(--card);
+  color: var(--ink);
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#education h2 {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 0;
+  background: var(--card);
+}
+
+#education .edu1, 
+#education .edu2 {
+  width: 100%;
+  min-height: unset;
+  margin: 0;
+  padding: 12px;
+  background: var(--card);
+  border-left: 3px solid var(--ink);
+  border-radius: 6px;
+}
+
+/* Experience */
+#experience {
+  width: min(94vw, 720px);
+  background: var(--card);
+  color: var(--ink);
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#experience h2 {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 0 0 6px 0;
+  background: var(--card);
+}
+
+#experience .exp1 {
+  display: block;
+  padding: 8px 0;
+  background: var(--card);
+}
+
+#experience ul {
+  width: 100%;
+  width: 90%;
+  margin: 6px 0 0 18px;
+  background: var(--card);
+}
+
+/* Projects */
+#project {
+  width: min(94vw, 720px);
+  background: var(--card);
+  color: var(--ink);
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#project h2 {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 0;
+  background: var(--card);
+}
+
+#project .proj {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;      /* stack on phones */
+  gap: 10px;
+  padding: 6px;
+  background: var(--card);
+}
+
+#project .proj1,
+#project .subproj1 {
+  width: 100%;
+  min-height: 120px;
+  border: 2px solid var(--ink);
+  border-radius: 10px;
+  padding: 12px;
+  background: var(--card);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#project .proj1 img {
+  width: 56px;
+  height: 56px;
+}
+
+#project .proj1 h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+#project .subproj1 h3 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--ink);          /* you used this on desktop */
+  text-align: left;
+  padding: 0;
+}
+.subproj1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .hover-text{
+     display: none !important;
+    }
+
+/* Motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
